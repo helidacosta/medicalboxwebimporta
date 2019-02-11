@@ -25,6 +25,9 @@ public class MedicalRecordsPageObject {
 	@FindBy(xpath = "//div[@class='modal-footer']//button[contains(text(),'SIM')]")
 	WebElement btnSim;
 	
+	@FindBy(xpath = "//div[@class='topnav']//a")
+	WebElement btnExpandir;
+	
 	
 	
 	public MedicalRecordsPageObject(WebDriver driver) {
@@ -52,6 +55,11 @@ public class MedicalRecordsPageObject {
 		
 	public void clickBtnConcluir() {
 		btnConcluir.click();
+		try {Thread.sleep(2000);}catch(Exception e) {e.printStackTrace();}
+	}
+	
+	public void clickBtnExpandir() {
+		btnExpandir.click();
 		try {Thread.sleep(2000);}catch(Exception e) {e.printStackTrace();}
 	}
 	

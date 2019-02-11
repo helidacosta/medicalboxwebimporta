@@ -54,11 +54,11 @@ public class NewPatientTest {
 		try {
 			List<PatientImporta> pacientes = reader.readCsv();
 			for(PatientImporta patient:pacientes) {
-				if(count >= 5) {
-					driver.manage().deleteAllCookies();
-					Utils.login(driver);
-				   	count = 0;
-				}
+				//if(count >= 5) {
+					//driver.manage().deleteAllCookies();
+					//Utils.login(driver);
+				   	//count = 0;
+				//}
 				mainscreen.clickBtnPacients();
 				patients.clickBtnNewPatient();
 				newpacient.clickExpandirData();
@@ -102,7 +102,7 @@ public class NewPatientTest {
 				}
 				count++;
 				
-				
+				medrecords.clickBtnExpandir();
 				mainscreen.clickBtnRemovePacients();
 			}			
 	   } catch (Exception e) {e.printStackTrace();}
